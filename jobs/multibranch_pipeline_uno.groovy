@@ -1,4 +1,3 @@
-import dsl.MultibranchPipeline
 
 String project_name = "multibranch-pipeline-uno"
 

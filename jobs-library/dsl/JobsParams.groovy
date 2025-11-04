@@ -1,4 +1,3 @@
-package dsl
 
 class JobsParams {
 

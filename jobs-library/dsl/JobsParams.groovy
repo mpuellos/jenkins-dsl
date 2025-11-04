@@ -1,4 +1,4 @@
-package co.cobre.dsl
+package dsl
 
 class JobsParams {
 

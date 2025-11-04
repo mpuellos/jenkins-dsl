@@ -1,6 +1,4 @@
-import dsl.MultibranchPipeline
-
-
+i
 String project_name = "multibranch-pipeline-uno"
 
 new MultibranchPipeline().

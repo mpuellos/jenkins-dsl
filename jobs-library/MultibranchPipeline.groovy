@@ -25,6 +25,7 @@ class MultibranchPipeline extends JobsParams {
                     buildForkPRMerge(this.build_fork_merge)
                     buildOriginBranch(this.build_origin_branch)
                     buildOriginPRMerge(this.build_origin_merge)
+                    repoOwner(this.enterprise)
                     repository(this.repository_name)
                     includes(this.branches)
                 }

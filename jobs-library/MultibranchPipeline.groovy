@@ -10,6 +10,8 @@ class MultibranchPipeline extends JobsParams {
     String project_name
     String repository_name
     String branches = 'main fix-* PR-*'
+    String enterprise = 'mpuellos'
+
 
     boolean build_fork_merge = true
     boolean build_origin_branch = true

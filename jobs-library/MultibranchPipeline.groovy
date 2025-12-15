@@ -1,4 +1,3 @@
-package jobs_library
 import groovy.transform.builder.Builder
 import groovy.transform.builder.SimpleStrategy
 import javaposse.jobdsl.dsl.DslFactory
@@ -9,26 +8,35 @@ class MultibranchPipeline extends JobsParams {
 
     String project_name
     String repository_name
-    String branches = 'main fix-* PR-*'
-    String enterprise = 'mpuellos'
+    String branches = 'main fix/*'
+    //String enterprise = 'mpuellos'
 
-
-    boolean build_fork_merge = true
-    boolean build_origin_branch = true
-    boolean build_origin_merge = true
 
     void build(DslFactory dslFactory) {
         dslFactory.multibranchPipelineJob(this.project_name) {
             branchSources {
                 github {
                     id(this.project_name)
-                    buildForkPRMerge(this.build_fork_merge)
-                    buildOriginBranch(this.build_origin_branch)
-                    buildOriginPRMerge(this.build_origin_merge)
                     repoOwner(this.enterprise)
+                    //scanCredentialsId(this.token_git)
                     repository(this.repository_name)
                     includes(this.branches)
+
+                    traits {
+                        branchDiscoveryTrait {
+                            strategyId(1)
+                        }
+                        originPullRequestDiscoveryTrait {
+                            strategyId(1)
+                        }
+
+                        forkPullRequestDiscoveryTrait {
+                            strategyId(1)
+                            trust(fromUsersWithAdminOrWritePermission())
+                        }
+                    }
                 }
+
             }
             configure { node ->
                 def factory = node / 'factory'

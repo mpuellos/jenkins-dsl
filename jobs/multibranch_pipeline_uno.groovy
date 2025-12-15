@@ -1,4 +1,5 @@
-String project_name = "multibranch-pipeline-uno"
+
+String project_name = "simple-java-maven-app"
 
 new MultibranchPipeline().
         project_name(project_name).

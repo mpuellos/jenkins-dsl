@@ -24,7 +24,7 @@ class MultibranchPipeline extends JobsParams {
                     traits {
                         gitHubBranchDiscovery {
                             strategyId(1)
-//                        }
+                        }
                         gitHubPullRequestDiscovery {
                             strategyId(1)
                         }

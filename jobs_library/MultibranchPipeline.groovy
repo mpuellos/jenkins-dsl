@@ -65,7 +65,7 @@ class MultibranchPipeline extends JobsParams {
             }
             orphanedItemStrategy {
                 discardOldItems {
-                    numToKeep(orphan_items_keep)
+                    numToKeep(this.orphan_items_keep)
                 }
             }
         }

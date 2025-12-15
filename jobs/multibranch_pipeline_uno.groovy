@@ -1,4 +1,4 @@
-import jobs_library.MultibranchPipeline
+
 
 evaluate(new File("../jobs_library/JobsParams.groovy"))
 evaluate(new File("../jobs_library/MultibranchPipeline.groovy"))

@@ -1,4 +1,3 @@
-package jobs_library
 
 class JobsParams {
 

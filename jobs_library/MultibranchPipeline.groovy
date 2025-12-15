@@ -4,7 +4,7 @@ import javaposse.jobdsl.dsl.DslFactory
 
 @Builder(builderStrategy = SimpleStrategy, prefix = '')
 
-class MultibranchPipeline {
+class MultibranchPipeline extends JobsParams {
 
     String project_name
     String repository_name
@@ -63,7 +63,7 @@ class MultibranchPipeline {
             }
             orphanedItemStrategy {
                 discardOldItems {
-                    numToKeep(0)
+                    numToKeep(orphan_items_keep)
                 }
             }
         }

@@ -18,21 +18,20 @@ class MultibranchPipeline extends JobsParams {
                 github {
                     id(this.project_name)
                     repoOwner(this.enterprise)
-                    //scanCredentialsId(this.token_git)
                     repository(this.repository_name)
                     includes(this.branches)
 
-//                    branchDiscoveryTrait {
-//                        strategyId(1)
-//                    }
-//                    originPullRequestDiscoveryTrait {
-//                        strategyId(1)
-//                    }
-//
-//                    forkPullRequestDiscoveryTrait {
-//                        strategyId(1)
-//                        trust(fromUsersWithAdminOrWritePermission())
-//                    }
+                    branchDiscoveryTrait {
+                        strategyId(1)
+                    }
+                    originPullRequestDiscoveryTrait {
+                        strategyId(1)
+                    }
+
+                    forkPullRequestDiscoveryTrait {
+                        strategyId(1)
+                        trust(fromUsersWithAdminOrWritePermission())
+                    }
 
                 }
 

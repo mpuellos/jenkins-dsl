@@ -9,7 +9,7 @@ class MultibranchPipeline extends JobsParams {
     String project_name
     String repository_name
     String branches = 'main fix/*'
-    //String enterprise = 'mpuellos'
+    String enterprise = 'mpuellos'
 
 
     void build(DslFactory dslFactory) {

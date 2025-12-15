@@ -1,4 +1,4 @@
-import MultibranchPipeline
+import jobs_library.MultibranchPipeline
 
 String project_name = "simple-java-maven-app"
 

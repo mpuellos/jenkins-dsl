@@ -22,17 +22,17 @@ class MultibranchPipeline extends JobsParams {
                     repository(this.repository_name)
                     includes(this.branches)
 
-                    branchDiscoveryTrait {
-                        strategyId(1)
-                    }
-                    originPullRequestDiscoveryTrait {
-                        strategyId(1)
-                    }
-
-                    forkPullRequestDiscoveryTrait {
-                        strategyId(1)
-                        trust(fromUsersWithAdminOrWritePermission())
-                    }
+//                    branchDiscoveryTrait {
+//                        strategyId(1)
+//                    }
+//                    originPullRequestDiscoveryTrait {
+//                        strategyId(1)
+//                    }
+//
+//                    forkPullRequestDiscoveryTrait {
+//                        strategyId(1)
+//                        trust(fromUsersWithAdminOrWritePermission())
+//                    }
 
                 }
 

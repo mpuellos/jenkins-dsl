@@ -1,3 +1,4 @@
+import MultibranchPipeline
 
 String project_name = "simple-java-maven-app"
 

@@ -21,10 +21,10 @@ class MultibranchPipeline extends JobsParams {
                     repository(this.repository_name)
                     includes(this.branches)
 
-                    branchDiscoveryTrait {
+                    gitHubBranchDiscovery {
                         strategyId(1)
                     }
-                    originPullRequestDiscoveryTrait {
+                    gitHubPullRequestDiscovery {
                         strategyId(1)
                     }
 

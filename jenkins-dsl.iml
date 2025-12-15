@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/freestyle" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/jobs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/jobs-library" isTestSource="false" packagePrefix="jobs_library" />
+      <sourceFolder url="file://$MODULE_DIR$/jobs_library" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

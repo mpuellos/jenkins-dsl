@@ -1,3 +1,5 @@
+package jobs_library
+
 import groovy.transform.builder.Builder
 import groovy.transform.builder.SimpleStrategy
 import javaposse.jobdsl.dsl.DslFactory

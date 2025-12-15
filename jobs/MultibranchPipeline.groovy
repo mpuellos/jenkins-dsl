@@ -25,17 +25,8 @@ class MultibranchPipeline extends JobsParams {
                         gitHubBranchDiscovery {
                             strategyId(1)
                         }
-                        gitHubPullRequestDiscovery {
-                            strategyId(1)
-                        }
 
-//                    forkPullRequestDiscoveryTrait {
-//                        strategyId(1)
-//                        trust(fromUsersWithAdminOrWritePermission())
-//                    }
                     }
-
-
                 }
 
             }

@@ -25,6 +25,10 @@ class MultibranchPipeline extends JobsParams {
                             configuredByUrl(false)
 
                             traits {
+                                headWildcardFilter {
+                                    includes(this.branches)
+                                    excludes('')
+                                }
                                 gitHubBranchDiscovery {
                                     strategyId(1)    // Exclude branches that are also filed as PRs
                                 }

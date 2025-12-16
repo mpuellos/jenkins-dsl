@@ -15,17 +15,20 @@ class MultibranchPipeline extends JobsParams {
     void build(DslFactory dslFactory) {
         dslFactory.multibranchPipelineJob(this.project_name) {
             branchSources {
-                source {
-                    github {
-                        id(this.project_name)
-                        repoOwner(this.enterprise)
-                        repository(this.repository_name)
-                        includes(this.branches)
+                branchSource {
+                    source {
+                        github {
+                            id(this.project_name)
+                            repoOwner(this.enterprise)
+                            repository(this.repository_name)
+                            includes(this.branches)
 
+
+                        }
 
                     }
-
                 }
+
 
             }
             configure { node ->

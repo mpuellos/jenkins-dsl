@@ -46,6 +46,13 @@ class MultibranchPipeline extends JobsParams {
 
             }
             configure { node ->
+                // 1️⃣ Agregar el trait para PRs desde forks
+                def traitsNode = node / 'sources' / 'data' / 'jenkins.branch.BranchSource' / 'source' / 'traits'
+                traitsNode << 'org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait' {
+                    strategyId(1) // 1 = "Merging the pull request with the current target branch revision"
+                    trust(class: 'org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission')
+                }
+
                 def factory = node / 'factory'
                 if (factory == null) {
                     factory = node.appendNode('factory')

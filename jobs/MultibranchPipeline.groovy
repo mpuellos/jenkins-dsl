@@ -21,8 +21,8 @@ class MultibranchPipeline extends JobsParams {
                             id(this.project_name)
                             repoOwner(this.enterprise)
                             repository(this.repository_name)
-                            repositoryUrl("https://github.com/${this.enterprise}/${this.repository_name}.git")
-                            configuredByUrl("https://github.com/${this.enterprise}/${this.repository_name}")
+                            repositoryUrl('')
+                            configuredByUrl(false)
 
 
                         }

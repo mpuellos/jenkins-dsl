@@ -24,6 +24,15 @@ class MultibranchPipeline extends JobsParams {
                             repositoryUrl('')
                             configuredByUrl(false)
 
+                            traits {
+                                gitHubBranchDiscovery {
+                                    strategyId(1)    // Exclude branches that are also filed as PRs
+                                }
+                                gitHubPullRequestDiscovery {
+                                    strategyId(1)    // Merge con la target
+                                }
+                            }
+
 
                         }
 

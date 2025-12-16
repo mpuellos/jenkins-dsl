@@ -15,6 +15,7 @@ class MultibranchPipeline extends JobsParams {
     void build(DslFactory dslFactory) {
         dslFactory.multibranchPipelineJob(this.project_name) {
             branchSources {
+                disabled()
                 branchSource {
                     source {
                         github {
